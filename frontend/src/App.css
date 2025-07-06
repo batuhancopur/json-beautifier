@@ -1,0 +1,94 @@
+/* Additional styles for the App component */
+.card h2 {
+  margin-bottom: 16px;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.textarea {
+  background: #fafafa;
+  border: 2px solid #e9ecef;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.textarea:focus {
+  background: #fff;
+}
+
+/* Custom scrollbar for textareas */
+.textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.textarea::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.textarea::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Button states */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn:disabled:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* File input styling */
+input[type="file"] {
+  display: none;
+}
+
+/* Success and error message animations */
+.error, .success {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive improvements */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .header p {
+    font-size: 1rem;
+  }
+  
+  .card {
+    padding: 16px;
+  }
+  
+  .card h2 {
+    font-size: 1.3rem;
+  }
+  
+  .textarea {
+    font-size: 12px;
+    padding: 12px;
+  }
+} 

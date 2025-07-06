@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Get the directory where the app bundle is located
+APP_DIR="$(cd "$(dirname "$0")/../.." && pwd)"
+PROJECT_DIR="$(dirname "$APP_DIR")"
+
+# Change to the project directory
+cd "$PROJECT_DIR"
+
+# Check if JAR file exists
+if [ ! -f "target/json-beautifier-1.0.0.jar" ]; then
+    osascript -e 'display alert "JSON Beautifier" message "JAR file not found. Please build the project first using ./build.sh" buttons {"OK"} default button "OK"'
+    exit 1
+fi
+
+# Run the JAR file
+java -jar target/json-beautifier-1.0.0.jar
