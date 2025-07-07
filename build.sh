@@ -25,7 +25,8 @@ npm run build
 echo "📁 Copying built React files to Spring Boot static resources..."
 cd ..
 rm -rf src/main/resources/static/*
-cp -r frontend/build/* src/main/resources/static/
+cp -r frontend/build/static src/main/resources/static/
+cp frontend/build/index.html src/main/resources/static/
 
 echo "🍃 Building Spring Boot application..."
 mvn clean package spring-boot:repackage -DskipTests
